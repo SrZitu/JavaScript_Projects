@@ -22,7 +22,7 @@ let weather = {
         alert("Failed to fetch weather data.");
       });
   },
-  displayWeather: function (wheatherData) {
+  getWeatherData: function (wheatherData) {
     const { name } = wheatherData;
     const { icon, description } = wheatherData.weather[0];
     const { temp, humidity, feels_like } = wheatherData.main;
