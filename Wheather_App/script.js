@@ -1,7 +1,7 @@
 
 let weather = {
   apiKey: "a2f6e8d56e32c8e64914535a312df769",
-  fetchWeather: function (city) {
+  getWeatherData: function (city) {
     axios
       .get(
         "https://api.openweathermap.org/data/2.5/weather?q=" +
@@ -22,7 +22,7 @@ let weather = {
         alert("Failed to fetch weather data.");
       });
   },
-  getWeatherData: function (wheatherData) {
+  displayWeather: function (wheatherData) {
     const { name } = wheatherData;
     const { icon, description } = wheatherData.weather[0];
     const { temp, humidity, feels_like } = wheatherData.main;
